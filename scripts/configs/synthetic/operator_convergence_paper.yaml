@@ -1,0 +1,31 @@
+# Paper config: spectral stability of the sheaf Laplacian (Figure 3) on the
+# synthetic statistical bundle over Sym++(n) with the Levi-Civita connection of
+# the Wasserstein metric.
+#
+# Sweeps three manifold dimensions, n = 2, 3, 4 (fiber dimension d = 3, 6, 10);
+# each one is a curve in both panels of Figure 3. The reference operator is
+# built from n_max[n_dim] samples, chosen so that n_max * d is about 10^4.
+
+n_dim_grid: [2, 3, 4]
+n_max_by_n_dim:
+  2: 4000      # dense eigendecomposition of a 12000 x 12000 matrix
+  3: 2000      # 12000 x 12000
+  4: 1000      # 10000 x 10000
+n_grid: [50, 100, 200, 400, 800]
+top_k: 32
+
+# Graph construction
+graph_type: knn
+distance_type: wasserstein
+k_neighbors: 8
+edge_weight_sigma: 1.0
+eigenvalue_range: [0.5, 2.0]   # informational: the sampler's default range is used
+
+# Levi-Civita parallel-transport ODE
+n_transport_steps: 50
+
+# Coordinate convention
+rescale: true
+
+# Sweep
+seeds: [0, 1, 2]

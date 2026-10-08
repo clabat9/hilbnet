@@ -1,0 +1,18 @@
+# Small smoke-test variant of operator_convergence_paper.yaml, for quick checks
+# and CI. The paper sweep is operator_convergence_paper.yaml.
+
+n_dim: 2                    # Sym(n=2): fiber dim m = 3
+n_grid: [20, 40, 80]
+n_max: 200
+top_k: 10
+
+graph_type: knn
+distance_type: wasserstein
+k_neighbors: 4
+edge_weight_sigma: 1.0
+eigenvalue_range: [0.5, 2.0]   # informational: the sampler's default range is used
+
+n_transport_steps: 20
+rescale: true
+
+seeds: [0, 1]

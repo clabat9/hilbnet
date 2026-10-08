@@ -1,0 +1,38 @@
+# MLP fiber baseline — HilbNet stripped to per-(node, timestep) MLP.
+#
+# kappa=[1,1] triggers the `_uses_transport=False` skip-allocation path in
+# `setup_transport`: every layer reduces to a per-(node, timestep) pointwise
+# channel mix, and the sheaf Laplacian is never applied. Used as the
+# "MLP fiber baseline" row in paper Table 2.
+#
+# Same config used for both METR-LA and PEMS-BAY; the runner overrides the
+# `dataset:` field below via the `--dataset` CLI flag.
+
+model: hilbnet
+dataset: metr-la
+
+window_in: 12
+window_out: 12
+add_time_of_day: true
+threshold_k: 0.1
+
+features: [2, 16, 32]   # capacity-matched against the other variants
+kappa: [1, 1]           # no graph propagation; setup_transport skips allocation
+
+batch_size: 32
+epochs: 150
+patience: 20
+lr: 5.0e-3
+weight_decay: 0.0
+dropout: 0.0
+clip_grad_norm: 5.0     # DCRNN convention; safety net (no-op for HilbNet)
+
+# Transport keys are ignored when max(kappa) == 1; listed only for cfg
+# uniformity (setup_transport short-circuits before reading them).
+transport_param: direct
+transport_init: identity
+transport_lr: 0
+
+reg_param: 0.0          # no transport → smooth-section penalty is identically 0
+kernel: rbf
+kernel_param: 1.0

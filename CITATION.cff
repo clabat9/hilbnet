@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "hilbnet: code for Consistent Geometric Deep Learning via Hilbert Bundles and Cellular Sheaves"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/clabat9/hilbnet"
+authors:
+  - given-names: Kartik
+    family-names: Tandon
+  - given-names: Julian
+    family-names: Gould
+  - given-names: Tanishq
+    family-names: Bhatia
+  - given-names: Francesca
+    family-names: Dominici
+  - given-names: Alejandro
+    family-names: Ribeiro
+  - given-names: Claudio
+    family-names: Battiloro
+preferred-citation:
+  type: conference-paper
+  title: "Consistent Geometric Deep Learning via Hilbert Bundles and Cellular Sheaves"
+  authors:
+    - given-names: Kartik
+      family-names: Tandon
+    - given-names: Julian
+      family-names: Gould
+    - given-names: Tanishq
+      family-names: Bhatia
+    - given-names: Francesca
+      family-names: Dominici
+    - given-names: Alejandro
+      family-names: Ribeiro
+    - given-names: Claudio
+      family-names: Battiloro
+  collection-title: "Advances in Neural Information Processing Systems"
+  year: 2026
+  identifiers:
+    - type: doi
+      value: 10.48550/arXiv.2605.06395
+      description: "arXiv preprint 2605.06395"

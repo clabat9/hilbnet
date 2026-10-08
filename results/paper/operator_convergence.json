@@ -1,0 +1,491 @@
+{
+  "experiment": "operator_convergence",
+  "config_path": "scripts/configs/synthetic/operator_convergence_paper.yaml",
+  "config": {
+    "n_dim_grid": [
+      2,
+      3,
+      4
+    ],
+    "n_max_by_n_dim": {
+      "2": 4000,
+      "3": 2000,
+      "4": 1000
+    },
+    "n_grid": [
+      50,
+      100,
+      200,
+      400,
+      800
+    ],
+    "top_k": 32,
+    "graph_type": "knn",
+    "distance_type": "wasserstein",
+    "k_neighbors": 8,
+    "edge_weight_sigma": 1.0,
+    "eigenvalue_range": [
+      0.5,
+      2.0
+    ],
+    "n_transport_steps": 50,
+    "rescale": true,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "rows": [
+    {
+      "seed": 0,
+      "n_dim": 2,
+      "n_nodes": 50,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 1.774115800857544,
+      "spectral_relmax": 31.156356989338878,
+      "section_norm": 1.7792183528592151
+    },
+    {
+      "seed": 0,
+      "n_dim": 2,
+      "n_nodes": 100,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.9233247637748718,
+      "spectral_relmax": 18.42639430548741,
+      "section_norm": 1.392676830291748
+    },
+    {
+      "seed": 0,
+      "n_dim": 2,
+      "n_nodes": 200,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.43907421827316284,
+      "spectral_relmax": 9.51939058377468,
+      "section_norm": 1.0207890507836426
+    },
+    {
+      "seed": 0,
+      "n_dim": 2,
+      "n_nodes": 400,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.2362113744020462,
+      "spectral_relmax": 5.040112507915509,
+      "section_norm": 0.7414072513580322
+    },
+    {
+      "seed": 0,
+      "n_dim": 2,
+      "n_nodes": 800,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.10029473900794983,
+      "spectral_relmax": 1.932444502316849,
+      "section_norm": 0.5490680015407143
+    },
+    {
+      "seed": 0,
+      "n_dim": 3,
+      "n_nodes": 50,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 1.1387627124786377,
+      "spectral_relmax": 4.610818430284,
+      "section_norm": 3.425527799051084
+    },
+    {
+      "seed": 0,
+      "n_dim": 3,
+      "n_nodes": 100,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.6152685284614563,
+      "spectral_relmax": 3.1283023706783646,
+      "section_norm": 2.9634988784790037
+    },
+    {
+      "seed": 0,
+      "n_dim": 3,
+      "n_nodes": 200,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.43330898880958557,
+      "spectral_relmax": 2.1876410420079,
+      "section_norm": 2.45669488801824
+    },
+    {
+      "seed": 0,
+      "n_dim": 3,
+      "n_nodes": 400,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.23020245134830475,
+      "spectral_relmax": 0.9655286544641168,
+      "section_norm": 2.0124481201171873
+    },
+    {
+      "seed": 0,
+      "n_dim": 3,
+      "n_nodes": 800,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.08992631733417511,
+      "spectral_relmax": 0.44204519937416475,
+      "section_norm": 1.6975637903387428
+    },
+    {
+      "seed": 0,
+      "n_dim": 4,
+      "n_nodes": 50,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.6897590160369873,
+      "spectral_relmax": 1.3431964354258445,
+      "section_norm": 5.001499752179753
+    },
+    {
+      "seed": 0,
+      "n_dim": 4,
+      "n_nodes": 100,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.311052531003952,
+      "spectral_relmax": 0.7345190839607321,
+      "section_norm": 4.251882553100586
+    },
+    {
+      "seed": 0,
+      "n_dim": 4,
+      "n_nodes": 200,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.22192507982254028,
+      "spectral_relmax": 0.5784849873376157,
+      "section_norm": 3.828969571289733
+    },
+    {
+      "seed": 0,
+      "n_dim": 4,
+      "n_nodes": 400,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.04497487097978592,
+      "spectral_relmax": 0.0791901565765169,
+      "section_norm": 3.4168468475341798
+    },
+    {
+      "seed": 0,
+      "n_dim": 4,
+      "n_nodes": 800,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.05049861595034599,
+      "spectral_relmax": 0.121084085439488,
+      "section_norm": 3.0493642763881774
+    },
+    {
+      "seed": 1,
+      "n_dim": 2,
+      "n_nodes": 50,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 1.8170419931411743,
+      "spectral_relmax": 31.907743778084185,
+      "section_norm": 1.9144039985656407
+    },
+    {
+      "seed": 1,
+      "n_dim": 2,
+      "n_nodes": 100,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.9815947413444519,
+      "spectral_relmax": 18.808886326712177,
+      "section_norm": 1.4023653984069824
+    },
+    {
+      "seed": 1,
+      "n_dim": 2,
+      "n_nodes": 200,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.4933394193649292,
+      "spectral_relmax": 10.07267219003722,
+      "section_norm": 0.9476402617723297
+    },
+    {
+      "seed": 1,
+      "n_dim": 2,
+      "n_nodes": 400,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.24331507086753845,
+      "spectral_relmax": 4.7735649181671045,
+      "section_norm": 0.7206615447998047
+    },
+    {
+      "seed": 1,
+      "n_dim": 2,
+      "n_nodes": 800,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.1090797409415245,
+      "spectral_relmax": 2.0684133843359747,
+      "section_norm": 0.5193843470267586
+    },
+    {
+      "seed": 1,
+      "n_dim": 3,
+      "n_nodes": 50,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 1.1228257417678833,
+      "spectral_relmax": 5.055446269202907,
+      "section_norm": 3.7125512091581534
+    },
+    {
+      "seed": 1,
+      "n_dim": 3,
+      "n_nodes": 100,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.5351592898368835,
+      "spectral_relmax": 3.0386382137418364,
+      "section_norm": 2.681715202331543
+    },
+    {
+      "seed": 1,
+      "n_dim": 3,
+      "n_nodes": 200,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.353473037481308,
+      "spectral_relmax": 1.8999484686218717,
+      "section_norm": 2.395822700476138
+    },
+    {
+      "seed": 1,
+      "n_dim": 3,
+      "n_nodes": 400,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.22551655769348145,
+      "spectral_relmax": 0.9629257194534008,
+      "section_norm": 1.976841926574707
+    },
+    {
+      "seed": 1,
+      "n_dim": 3,
+      "n_nodes": 800,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.09778958559036255,
+      "spectral_relmax": 0.4880807718707927,
+      "section_norm": 1.6472782167930011
+    },
+    {
+      "seed": 1,
+      "n_dim": 4,
+      "n_nodes": 50,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.5198248028755188,
+      "spectral_relmax": 1.0572359401390292,
+      "section_norm": 4.57992660801659
+    },
+    {
+      "seed": 1,
+      "n_dim": 4,
+      "n_nodes": 100,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.4363867938518524,
+      "spectral_relmax": 1.018563714658995,
+      "section_norm": 4.487861633300781
+    },
+    {
+      "seed": 1,
+      "n_dim": 4,
+      "n_nodes": 200,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.24485468864440918,
+      "spectral_relmax": 0.537583927812674,
+      "section_norm": 3.9281790717170053
+    },
+    {
+      "seed": 1,
+      "n_dim": 4,
+      "n_nodes": 400,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.0353209413588047,
+      "spectral_relmax": 0.08192568183004591,
+      "section_norm": 3.405288314819336
+    },
+    {
+      "seed": 1,
+      "n_dim": 4,
+      "n_nodes": 800,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.06236803159117699,
+      "spectral_relmax": 0.14473116640591563,
+      "section_norm": 3.0206089315007834
+    },
+    {
+      "seed": 2,
+      "n_dim": 2,
+      "n_nodes": 50,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 1.7374321222305298,
+      "spectral_relmax": 33.135503212863256,
+      "section_norm": 1.733391174101392
+    },
+    {
+      "seed": 2,
+      "n_dim": 2,
+      "n_nodes": 100,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.954290509223938,
+      "spectral_relmax": 19.286488485167478,
+      "section_norm": 1.4552141189575196
+    },
+    {
+      "seed": 2,
+      "n_dim": 2,
+      "n_nodes": 200,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.482805460691452,
+      "spectral_relmax": 9.431057569329408,
+      "section_norm": 0.957239965163959
+    },
+    {
+      "seed": 2,
+      "n_dim": 2,
+      "n_nodes": 400,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.19930021464824677,
+      "spectral_relmax": 3.7033724805652453,
+      "section_norm": 0.7109350204467774
+    },
+    {
+      "seed": 2,
+      "n_dim": 2,
+      "n_nodes": 800,
+      "n_ref": 4000,
+      "top_k": 32,
+      "spectral_l2": 0.10282958298921585,
+      "spectral_relmax": 2.0094783259041784,
+      "section_norm": 0.5478436861676911
+    },
+    {
+      "seed": 2,
+      "n_dim": 3,
+      "n_nodes": 50,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 1.0418156385421753,
+      "spectral_relmax": 4.542431977376427,
+      "section_norm": 3.527104266490728
+    },
+    {
+      "seed": 2,
+      "n_dim": 3,
+      "n_nodes": 100,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.5518798828125,
+      "spectral_relmax": 2.770358750011638,
+      "section_norm": 2.80224609375
+    },
+    {
+      "seed": 2,
+      "n_dim": 3,
+      "n_nodes": 200,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.38690420985221863,
+      "spectral_relmax": 1.895793848575432,
+      "section_norm": 2.4618749717225805
+    },
+    {
+      "seed": 2,
+      "n_dim": 3,
+      "n_nodes": 400,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.21422961354255676,
+      "spectral_relmax": 0.9056710605665125,
+      "section_norm": 1.9878349304199219
+    },
+    {
+      "seed": 2,
+      "n_dim": 3,
+      "n_nodes": 800,
+      "n_ref": 2000,
+      "top_k": 32,
+      "spectral_l2": 0.108632393181324,
+      "spectral_relmax": 0.49314238772385355,
+      "section_norm": 1.6675569875078844
+    },
+    {
+      "seed": 2,
+      "n_dim": 4,
+      "n_nodes": 50,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.5410290956497192,
+      "spectral_relmax": 1.2606421877421832,
+      "section_norm": 5.103788872251498
+    },
+    {
+      "seed": 2,
+      "n_dim": 4,
+      "n_nodes": 100,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.4094213843345642,
+      "spectral_relmax": 0.8428360720218027,
+      "section_norm": 4.293246459960938
+    },
+    {
+      "seed": 2,
+      "n_dim": 4,
+      "n_nodes": 200,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.11989907920360565,
+      "spectral_relmax": 0.43412196973821193,
+      "section_norm": 3.8700749543151836
+    },
+    {
+      "seed": 2,
+      "n_dim": 4,
+      "n_nodes": 400,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.07263985276222229,
+      "spectral_relmax": 0.21603454738562713,
+      "section_norm": 3.343666839599609
+    },
+    {
+      "seed": 2,
+      "n_dim": 4,
+      "n_nodes": 800,
+      "n_ref": 1000,
+      "top_k": 32,
+      "spectral_l2": 0.024783071130514145,
+      "spectral_relmax": 0.045918239379715294,
+      "section_norm": 3.0014870749187845
+    }
+  ]
+}

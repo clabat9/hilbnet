@@ -1,0 +1,22 @@
+# Traffic data (download steps in README.md)
+data/
+
+# Outputs of your own runs; the paper's reference results are in results/paper/
+results/*
+!results/paper/
+figures/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Editors and OS files
+.DS_Store
+.idea/
+.vscode/

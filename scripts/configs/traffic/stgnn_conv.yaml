@@ -1,0 +1,30 @@
+# Spatiotemporal GNN baseline used in the paper's Table 2.
+#
+# Per-node temporal Conv1d → polynomial of the combinatorial Laplacian L=D-A.
+# No GLU, no LayerNorm, no residuals — deliberately a bare-minimum spatial-
+# temporal GNN ("PolyGCN+TCN"), distinct from canonical Yu-2018 STGCN.
+#
+# lr=1e-3 + clip_grad_norm=5 are baked in: lr=5e-3 diverges (no orthogonality
+# of propagation, unlike HilbNet's transports), so a smaller lr stabilizes
+# training. clip_grad_norm is a no-op at lr=1e-3 (a safety net).
+
+model: stgnn_conv
+dataset: metr-la
+
+window_in: 12
+window_out: 12
+add_time_of_day: true
+threshold_k: 0.1
+
+features: [2, 16, 32]   # same widths as the HilbNet variants
+kappa: [2, 2]           # spatial polynomial order
+
+batch_size: 32
+epochs: 150             # patience=20 usually stops training earlier
+patience: 20
+lr: 1.0e-3              # diverges at 5e-3 (HilbNet-tuned lr); 1e-3 is the stable regime
+weight_decay: 0.0
+dropout: 0.0
+clip_grad_norm: 5.0     # DCRNN convention; no-op at lr=1e-3 but symmetric stack across all archs
+
+kernel_size: 3          # temporal Conv1d kernel size

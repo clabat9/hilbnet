@@ -1,0 +1,37 @@
+# Free O(T) HilbNet: each edge transport is a product of Householder
+# reflections of the T=12 stalk (paper Table 2, R = 8 reflections).
+#
+# A general element of O(12) can need up to 12 reflections (Cartan-Dieudonne),
+# so products of 8 reflections cover a subset of O(12). This is still the most
+# expressive transport variant in Table 2.
+#
+# Same config used for both METR-LA and PEMS-BAY; the runner overrides the
+# `dataset:` field below via the `--dataset` CLI flag.
+
+model: hilbnet
+dataset: metr-la
+
+window_in: 12
+window_out: 12
+add_time_of_day: true
+threshold_k: 0.1
+
+features: [2, 16, 32]
+kappa: [2, 2]
+
+batch_size: 32
+epochs: 150
+patience: 20
+lr: 5.0e-3
+weight_decay: 0.0
+dropout: 0.0
+clip_grad_norm: 5.0     # DCRNN convention; safety net (no-op for HilbNet)
+
+transport_param: direct
+transport_init: identity_plus_noise
+transport_lr: 5.0e-3
+num_reflections: 8
+
+reg_param: 0.01
+kernel: rbf
+kernel_param: 1.0

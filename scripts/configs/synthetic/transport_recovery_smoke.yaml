@@ -1,0 +1,27 @@
+# Small smoke-test variant of transport_recovery_paper.yaml, for quick checks
+# and CI. The paper sweep is transport_recovery_paper.yaml.
+
+n_dim: 2                    # Sym(n=2): fiber dim m = 3
+n_nodes: 8
+
+graph_type: knn
+distance_type: wasserstein
+k_neighbors: 3
+edge_weight_sigma: 1.0
+eigenvalue_range: [0.5, 2.0]   # informational: the sampler's default range is used
+
+n_transport_steps: 20
+rescale: true
+
+variants: [direct, circulant, frozen_id]
+num_reflections: 8                         # over-parameterized over m=3
+num_bands: null
+transport_init: identity_plus_noise
+
+epochs: 2000               # direct (free O(m)) needs ~1500-2000 steps to converge
+batch_size: 64
+lr: 5.0e-3
+weight_decay: 0.0
+log_every: 200
+
+seeds: [0]

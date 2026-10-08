@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hilbnet"
+version = "1.0.0"
+description = "Code for the NeurIPS 2026 paper \"Consistent Geometric Deep Learning via Hilbert Bundles and Cellular Sheaves\""
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10,<3.13"
+authors = [
+    { name = "Kartik Tandon" },
+    { name = "Julian Gould" },
+    { name = "Tanishq Bhatia" },
+    { name = "Francesca Dominici" },
+    { name = "Alejandro Ribeiro" },
+    { name = "Claudio Battiloro" },
+]
+dependencies = [
+    "torch>=2.2",
+    "torch-geometric>=2.5",
+    "numpy>=1.26,<2",
+    "scipy>=1.11",
+    "pandas>=2.0",
+    "h5py>=3.10",
+    "matplotlib>=3.8",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2605.06395"
+Repository = "https://github.com/clabat9/hilbnet"
+
+[tool.setuptools]
+packages = ["hilbnet"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
