@@ -1,8 +1,8 @@
 # Consistent Geometric Deep Learning via Hilbert Bundles and Cellular Sheaves
 
-Kartik Tandon<sup>1,\*</sup>, Julian Gould<sup>2,\*</sup>, Tanishq Bhatia<sup>3</sup>, Francesca Dominici<sup>4</sup>, Alejandro Ribeiro<sup>1</sup>, Claudio Battiloro<sup>4,\*</sup>
+Kartik Tandon<sup>1,\*</sup>, Julian Gould<sup>2,\*</sup>, Tanishq Bhatia<sup>3</sup>, Francesca Dominici<sup>4</sup>, Alejandro Ribeiro<sup>1</sup>, Claudio Battiloro<sup>6,4,\*</sup>
 
-<sup>1</sup>University of Pennsylvania, <sup>2</sup>Sakana AI, <sup>3</sup>Northeastern University, <sup>4</sup>Harvard University. <sup>\*</sup>Equal contribution.
+<sup>1</sup>University of Pennsylvania, <sup>2</sup>Sakana AI, <sup>3</sup>Northeastern University, <sup>4</sup>Harvard University, <sup>5</sup>Brown University. <sup>\*</sup>Equal contribution.
 
 [![arXiv](https://img.shields.io/badge/arXiv-2605.06395-b31b1b.svg)](https://arxiv.org/abs/2605.06395)
 ![NeurIPS 2026 spotlight](https://img.shields.io/badge/NeurIPS%202026-spotlight-4b44ce.svg)
