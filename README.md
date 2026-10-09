@@ -1,6 +1,6 @@
 # Consistent Geometric Deep Learning via Hilbert Bundles and Cellular Sheaves
 
-Kartik Tandon<sup>1,\*</sup>, Julian Gould<sup>2,\*</sup>, Tanishq Bhatia<sup>3</sup>, Francesca Dominici<sup>4</sup>, Alejandro Ribeiro<sup>1</sup>, Claudio Battiloro<sup>6,4,\*</sup>
+Kartik Tandon<sup>1,\*</sup>, Julian Gould<sup>2,\*</sup>, Tanishq Bhatia<sup>3</sup>, Francesca Dominici<sup>4</sup>, Alejandro Ribeiro<sup>1</sup>, Claudio Battiloro<sup>5,4,\*</sup>
 
 <sup>1</sup>University of Pennsylvania, <sup>2</sup>Sakana AI, <sup>3</sup>Northeastern University, <sup>4</sup>Harvard University, <sup>5</sup>Brown University. <sup>\*</sup>Equal contribution.
 
@@ -11,7 +11,7 @@ Kartik Tandon<sup>1,\*</sup>, Julian Gould<sup>2,\*</sup>, Tanishq Bhatia<sup>3<
 
 ![From a Hilbert bundle to a sheaf neural network](assets/overview.png)
 
-Each sensor in a traffic network records a time series, so the signal at a node of the road graph is a function of time. The same is true when nodes carry probability distributions or other infinite-dimensional objects. HilbNets are convolutional networks for this kind of data.
+Nodes can carry time-series, probability distributions, or other infinite-dimensional objects, and they can lie on a manifold. HilbNets are convolutional networks for this kind of data.
 
 We model the data as a Hilbert bundle: a manifold with a Hilbert space of signals attached to each point, and a connection that transports signals between nearby points. A HilbNet stacks filters built from the connection Laplacian of the bundle, with pointwise nonlinearities in between.
 
